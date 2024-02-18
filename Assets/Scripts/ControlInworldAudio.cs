@@ -6,7 +6,8 @@ public class ControlInworldAudio : MonoBehaviour
     [SerializeField] PlayerControllerRPMVariant playerControllerRPMVariant;
     [SerializeField] Transform aiTransform;
     [SerializeField] Transform playerTransform;
-    [SerializeField] float minDistanceToTalk = 3;
+    [SerializeField] float minDistanceToInteract = 3;
+    [SerializeField] float minDistanceToTalk = 5;
     [SerializeField] KeyCode talkKey;
 
     RaycastHit hit;
@@ -14,8 +15,9 @@ public class ControlInworldAudio : MonoBehaviour
     bool canTalk;
     bool isTalking;
 
-    RaycastHit Hit => hit;
+    public RaycastHit Hit => hit;
     public bool CanInteract => canInteract;
+    public bool IsTalking => isTalking;
 
     private void Awake()
     {
@@ -43,7 +45,7 @@ public class ControlInworldAudio : MonoBehaviour
         if (canTalk)
         {
             //if hit a character, can interact with it
-            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, minDistanceToTalk))
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, minDistanceToInteract))
             {
                 if (hit.transform == aiTransform)
                 {
@@ -53,7 +55,7 @@ public class ControlInworldAudio : MonoBehaviour
             }
         }
 
-        //if not, can't interact
+        //else, can't interact
         canInteract = false;
     }
 

@@ -12,7 +12,7 @@ public class PlayerControllerRPMVariant : PlayerControllerRPM
             if (m_isTalking == false)
             {
                 m_isTalking = true;
-                InteralToggleTalk();
+                InternalToggleTalk();
                 InworldController.Instance.StartAudio();
             }
         }
@@ -21,7 +21,7 @@ public class PlayerControllerRPMVariant : PlayerControllerRPM
             if (m_isTalking)
             {
                 m_isTalking = false;
-                InteralToggleTalk();
+                InternalToggleTalk();
                 InworldController.Instance.PushAudio();
             }
         }
@@ -32,7 +32,7 @@ public class PlayerControllerRPMVariant : PlayerControllerRPM
         //base.HandlePTT();
     }
 
-    private void InteralToggleTalk()
+    private void InternalToggleTalk()
     {
         m_PushToTalk = m_isTalking == false;
         m_BlockAudioHandling = m_isTalking == false;
