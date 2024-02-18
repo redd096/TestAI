@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146eba7038a14426a7d95a5b80da5291, type: 3}
+  m_Name: testaiunity
+  m_EditorClassIdentifier: 
+  m_PlayerName: testaiunity
+  m_PlayerData: []
+  m_Workspaces:
+  - name: workspaces/default-m00tlmkmb2i942flx5i59a
+    displayName: Inworld AI Demos
+    experimentalFeatures: []
+    billingAccount: billing-accounts/23e2e205-93ab-4e16-a6fd-b2fbad0e261b
+    meta: 
+    runtimeAccess: RUNTIME_ACCESS_PRIVATE
+    scenes: []
+    keySecrets: []
+  - name: workspaces/killergame_workspace
+    displayName: KillerGame Workspace
+    experimentalFeatures: []
+    billingAccount: billing-accounts/23e2e205-93ab-4e16-a6fd-b2fbad0e261b
+    meta: 
+    runtimeAccess: RUNTIME_ACCESS_PRIVATE
+    scenes: []
+    keySecrets: []
+  m_UserID: 
+  m_BillingAccount: billing-accounts/23e2e205-93ab-4e16-a6fd-b2fbad0e261b
